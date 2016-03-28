@@ -1,0 +1,30 @@
+{
+  "name": "assets",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "kupark <pouu69@gmail.com>"
+  ],
+  "install": {
+    "paths": {
+      "css": "./css/libs",
+      "js": "./js/libs"
+    }
+  },
+  "license": "ISC",
+  "homepage": "https://github.com/pouu69/mobile_wedding_invitation",
+  "moduleType": [],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.1",
+    "bootstrap": "^3.3.6",
+    "jquery-mobile": "^1.4.5",
+    "Swiper": "swiper#^3.3.1"
+  }
+}
