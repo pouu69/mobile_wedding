@@ -19,14 +19,13 @@
 }
 
 /* section */
-.circle{
-
+.plan_detail_desc{
+    text-align:center;
+    margin-bottom:25px;
 }
-
-.how_to{
-
+.plan_detail_desc .plan_detail_desc_p{
+    font-size:27px;
 }
-
 .where_title{
     width:100%;
     text-align:center;
@@ -35,14 +34,15 @@
     font-weight:700;
 }
 .where_wedding_hall{
-    margin-top:45px;
     margin-bottom:60px;
 }
 
 .wedding_hall{
     display:inline-block;
 }
-
+.after_wedding_hall{
+    border:1px solid #FFE3E7;
+}
 .how_to_where{
     font-size:30px;
 }
@@ -54,3 +54,4 @@
     font-size:32px;
     font-weight:600;
 }
+

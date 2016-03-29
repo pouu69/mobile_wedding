@@ -1,8 +1,18 @@
 html,body{
     font-size: 100%;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    
+
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
 }
+
+section, article, aside, footer, header, nav, hgroup {
+    display:block;
+}
+
 a{
     text-decoration:none;
 }
@@ -17,6 +27,11 @@ video{
     width:100%;
     height:auto;
     border:2px solid #000000;
+}
+
+section{
+    margin-bottom : 60px;
+    margin-top : 60px;
 }
 
 .full-width{
@@ -46,12 +61,25 @@ video{
 .separator-container .separator.line-separator:after {
     float: right;
 }
+
+.separator-container{
+    margin-bottom:50px;
+}
+
 .big_title{
     font-size:70px !important;
     font-weight:700 !important;
     margin-bottom:40px;
     text-align: center;
 }
+
+.middle_title{
+    font-size:55px !important;
+    font-weight:600 !important;
+    margin-bottom:30px;
+    text-align: center;
+}
+
 
 .heart{
     color: #FF0800;

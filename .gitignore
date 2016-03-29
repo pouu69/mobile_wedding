@@ -4,9 +4,8 @@
 */cache/*
 !*/cache/index.html
 !*/cache/.htaccess
+.idea
 
-#Ignore user files
-assets/upload/*
-assets/upload/post/*
+
 *.swp
 

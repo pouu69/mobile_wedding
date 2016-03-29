@@ -23,7 +23,13 @@
     background-repeat: no-repeat;
 
     position: fixed;
+}
 
+.header .header-wrap.active {
+    background: #fff;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
 }
 
 .header .header-wrap .header-li-main{
@@ -40,4 +46,8 @@ font-size:3em;
 }
 .header .header-wrap .header-li-hamburger .sidebar-btn{
 
+}
+
+.sy-slides-wrap{
+    height:none !important;
 }
