@@ -30,8 +30,8 @@ video{
 }
 
 section{
-    margin-bottom : 60px;
-    margin-top : 60px;
+    margin-bottom : 15px;
+    margin-top : 15px;
 }
 
 .full-width{
@@ -67,23 +67,23 @@ section{
 }
 
 .big_title{
-    font-size:70px !important;
+    font-size:30px !important;
     font-weight:700 !important;
-    margin-bottom:40px;
+    margin-bottom:20px;
     text-align: center;
 }
 
 .middle_title{
-    font-size:55px !important;
+    font-size:23px !important;
     font-weight:600 !important;
-    margin-bottom:30px;
+    margin-bottom:10px;
     text-align: center;
 }
 
 
 .heart{
     color: #FF0800;
-    font-size: 40px;
+    font-size: 16px;
 }
 
 .grey_font{
