@@ -38,6 +38,12 @@
 }
 
 #fix_menu_gallery{
+    bottom: 135px;
+    right: 26px;
+    color: #ffffff;
+}
+
+#fix_menu_guest{
     bottom: 80px;
     right: 26px;
     color: #ffffff;
@@ -47,7 +53,7 @@
     color: #ffffff;
     right:0;
     right: 26px;
-    bottom: 135px;
+    bottom: 185px;
 }
 
 .fix_menu_container{

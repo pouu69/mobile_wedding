@@ -8,7 +8,9 @@ $(document).ready(function(){
     if(page === "gallery"){
         pswp.initSwipebox();
         bg.tabEvt();
-    }else{
+    }else if(page === 'guest'){
+        guest.init();
+    }else if(page === ''){
         slides.initSwiper();
         slides.initSlippry();
         scrollEvt();
