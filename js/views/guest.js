@@ -5,8 +5,6 @@ var guest = (function(){
     var page = 1;
     var datas = null;
 
-    var source = $('#comment_template').html();
-    var template = Handlebars.compile(source);
 
     var registerData = function(){
         var name = $('#name').val();
@@ -35,7 +33,7 @@ var guest = (function(){
             success : function (data, textStatus) {
                console.log(data,textStatus);
                 alert('등록되었습니다. 감사합니다.');
-
+                window.location.reload(true);
             },
             error : function(jqXHR,textStatus){
                 alert('실패하였습니다..');
@@ -51,10 +49,17 @@ var guest = (function(){
             type : 'GET',
             url : "/rest_comments?page="+page,
             success : function (data, textStatus) {
+                if(data.total_count < page*10){
+                    $('.more_btn').hide();
+                }else{
+                    $('.more_btn').show();
+                }
                 page++;
-                d.resolve();
+                d.resolve(data.data);
             },
             error : function(jqXHR,textStatus){
+                $('.more_btn').hide();
+
                 d.reject();
             }
         });
@@ -65,8 +70,10 @@ var guest = (function(){
     var loadData = function(){
         $.when(
             getData()
-        ).done(function(){
-            var commentHtml = template(datas);
+        ).done(function(ret){
+            var source = $('#comment_template').html();
+            var template = Handlebars.compile(source);
+            var commentHtml = template(ret);
             $('.comment_container').append(commentHtml);
         });
     };
@@ -76,9 +83,12 @@ var guest = (function(){
             e.preventDefault();
             registerData();
         });
+
+        $('.more_btn').click(function(e){
+            e.preventDefault();
+            loadData();
+        })
     };
-
-
     return {
         init : function(){
             registerEvt();

@@ -23,7 +23,8 @@
 }
 
 .fix_menu_list{
-    display: block;
+    position:fixed;
+    display: none;
     transition: bottom .2s linear 0s, opacity .2s linear, right 0.1s linear 2s;
     opacity: 0.0;
     z-index:0;
@@ -31,6 +32,7 @@
 
 .fix_menu_list.active{
     opacity: 1.0;
+    display: block;
     transition: bottom .4s cubic-bezier(.07,.69,.32,1.16), opacity .4s linear;
     font-size:25px;
     position: fixed;
