@@ -1,3 +1,18 @@
+ul{
+    margin:0px;
+}
+
+li, .box{
+    padding-left:5px;
+    padding-right:5px;
+}
+
+.box{
+    margin-bottom:10px;
+}
+.box img{
+    border : 1px solid #000000;
+}
 #box-container{
     margin-top:20px;
 }
