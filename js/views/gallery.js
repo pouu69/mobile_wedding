@@ -6,13 +6,13 @@ var bg = (function(){
     var closeBg = function(){
         $( '.bg-notify' ).fadeOut( "slow", function() {
             $('.bg-notify').hide();
-            $( '.bg-notify' ).unbind('touchstart');
+            //$( '.bg-notify' ).unbind('touchstart');
         });
     }
 
     return {
         tabEvt : function(){
-            $( '.bg-notify' ).bind('touchstart', function(e) {
+            $( '.bg-notify' ).click(function(e) {
                 e.preventDefault();
                 closeBg();
             });

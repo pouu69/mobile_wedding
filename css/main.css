@@ -55,3 +55,26 @@
     font-weight:600;
 }
 
+.real_location{
+
+}
+
+.location{
+    position:absolute;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.comments_notify{
+    background-color: #FFFF00;
+}
+
+.comments_notify .comments_notify_wrap{
+    text-align:center;
+    height:53px;
+}
+
+.comments_notify .comments_notify_wrap span{
+    font-size:34px;
+    color:#000000;
+}
