@@ -37,21 +37,36 @@ module.exports = function(grunt) {
 	  target: {
 	    files: [{
 	      expand: true,
-	      src: 'css/*.css',
-		 dest: 'build/<%= pkg.name%>.min.css',
+		cwd:'./css',
+	      src: '*.css',
+		 dest: 'build/css',
+		ext : '.min.css'
 	    }]
 	  }
+	},
+	watch:{
+		scripts:{
+			options:{
+				liverload:true,
+				nospawn:true
+			},
+			files : './js/views/*.js',
+			tasks: ['newer:uglify']
+		}
 	}
-
-
   });
 
   // Load the plugin that provides the "uglify" task.
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
-
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-newer');
+/*
+	grunt.event.on('watch', function(action, filepath, target){
+	});
+*/
   // Default task(s).
-  grunt.registerTask('default', ['concat','uglify', 'cssmin']);
+  grunt.registerTask('default', ['watch']);
 
 };

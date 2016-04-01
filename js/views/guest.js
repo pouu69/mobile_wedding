@@ -31,19 +31,17 @@ var guest = (function(){
             url : "/rest_comments",
             data : sendData,
             success : function (data, textStatus) {
-               console.log(data,textStatus);
                 alert('등록되었습니다. 감사합니다.');
                 window.location.reload(true);
             },
             error : function(jqXHR,textStatus){
-                alert('실패하였습니다..');
+                alert('실패하였습니다.');
             }
         });
     };
 
     var getData = function(){
         var d = $.Deferred();
-
         $.ajax({
             // type을 설정합니다.
             type : 'GET',
