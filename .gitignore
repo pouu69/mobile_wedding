@@ -6,6 +6,6 @@
 !*/cache/.htaccess
 .idea
 ./image
-
+./build/npm-debug.log
 *.swp
 
